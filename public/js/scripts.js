@@ -274,11 +274,9 @@ document.addEventListener("DOMContentLoaded", handleAccount_Settings);
     const button = document.getElementById("theme-switcher");
     let Li = document.querySelector(".bi")
     let logo = document.querySelector(".logo-img");
-    let root = document.querySelector(":root");
 
     button.addEventListener("click", (event) => {
-        console.log("Theme switcher has been clicked!");
-        root.classList.toggle("light")
+      
         if (Li.classList.contains("bi-brightness-low-fill")) {
             Li.classList.remove("bi-brightness-low-fill")
             Li.classList.add("bi-moon-stars-fill")

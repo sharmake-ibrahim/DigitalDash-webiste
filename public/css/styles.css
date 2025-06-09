@@ -2,11 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
 
 :root {
-    color-scheme: dark;
+    
     --nav-height: 70px;
-    --primary-clr: #111111;
-    --secondary-clr: #ffffff;
-    --accent-clr: #2dc489;
     --container-padding: 5rem 150px;
     --image-overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%);
 }
@@ -14,8 +11,9 @@
 .light {
     color-scheme: light;
     --primary-clr: #ffffff;
+       --accent-clr: #2dc489;
     --secondary-clr: #111111;
-    --accent-clr: #2dc489;
+ 
 }
 
 .dark {
@@ -83,13 +81,13 @@ button {
     font-size: 0.9rem;
 }
 
-a.primary-btn {
+a .primary-btn {
     width: 100%;
     max-width: 135px;
     height: 35px;
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-clr);
     align-content: center;
     text-align: center;
     font-size: 0.85rem;
@@ -97,6 +95,7 @@ a.primary-btn {
     border-radius: 50px;
     border: none;
     background-color: var(--accent-clr);
+  
 }
 
 .subtitle {
@@ -1359,34 +1358,40 @@ div[data-access="false"]:hover::after {
     background: var(--image-overlay), url("../assets/images/backgrounds/scenic-forest-path-in-gia-lai-vietnam.jpg");
     background-position: center;
     background-size: cover;
-    height: 99vh;
+    min-height: 100vh;
+    min-width: 100%;
+    display: grid;
+    justify-content: center;
+    place-items: center;
 }
 
-.About h1 {
+.about h1 {
+    padding-bottom: -2rem;
     color: white;
     font-size: 2rem;
-    position: absolute;
-    left: 25%;
-    top: 30%;
+    text-align: center;
+   
+}
+
+.split-about {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em 2em;
 }
 
 .About .txt p {
     color: white;
     font-size: 1rem;
-    position: absolute;
-    width: 30%;
-    left: 17.5%;
-    top: 40%;
+    max-width: 20rem;
+
+    
 }
 
 .About img {
-    margin-top: 1rem;
-    position: absolute;
-    height: 500px;
-    left: 50%;
-    top: 35%;
-    max-height: 400px;
-    max-width: 50%;
+    max-width: clamp(375px, 5vw, 400px);
     border: 1px solid white;
     background-color: black;
     border-radius: 5px 5px 5px 5px;
